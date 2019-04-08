@@ -1,4 +1,8 @@
-1. Clone the project from the URL "git@git.kms-technology.com:Aplus-BabySharks/Java_for_Tester.git"
-2. Open IDE and import a Maven project
-3. Setup environment for the Maven project
-4. Try to run "MyFirstTest" class
+1. Clone the project from the URL "git@git.kms-technology.com:Aplus-BabySharks/Java_for_Tester.git”
+2. Select your own branch
+3. Open IDE and create a Maven project
+4. Setup environment for the Maven project
+  + pom.xml file
+  + Add configuration for TestNG
+5. Develop your test cases
+6. Commit your code to your branch
