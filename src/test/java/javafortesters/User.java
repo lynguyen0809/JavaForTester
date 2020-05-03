@@ -39,13 +39,19 @@ public class User {
         String mustIncludeDigit = ".*[0123456789]+.*";
         String mustIncludeUppercase = ".*[A-Z].*";
 
-        if(!password.matches(mustIncludeDigit)){
-            throw new IllegalPassword("Password must be included Digit[0123456789]");
+        if(!password.matches(mustIncludeDigit) && !password.matches(mustIncludeUppercase)) {
+            throw new IllegalPassword("This password must be contains at least a Digit[0123456789] and a Uppercase Letter [A-Z]");
         }
-        if(!password.matches(mustIncludeUppercase)){
-            throw new IllegalPassword("Password must be include Uppercase Letter [A-Z]");
-        } else {
-            System.out.println("This password is valid");
+        else if(!password.matches(mustIncludeDigit) || !password.matches(mustIncludeUppercase)) {
+            if(!password.matches(mustIncludeDigit)) {
+                throw new IllegalPassword("Password must be included a Digit[0123456789]");
+            }
+            else  {
+                throw new IllegalPassword("Password must be include Uppercase Letter [A-Z]");
+            }
+        }
+        else {
+            System.out.println("This is a valid password");
         }
         this.password = password;
     }

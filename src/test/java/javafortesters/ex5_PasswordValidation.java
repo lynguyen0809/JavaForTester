@@ -1,12 +1,13 @@
 package javafortesters;
 
+import LyDemoJava.Person;
 import org.testng.annotations.Test;
 
 public class ex5_PasswordValidation {
 
     @Test
     public void validatePassword(){
-        User user = new User("user1", "invalidpassword1");
+        User user = new User("user1", "invalidpasswordA1");
 
         try {
             user.setPassword(user.getPassword());
